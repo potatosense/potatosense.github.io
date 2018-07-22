@@ -11,19 +11,21 @@ define([], function () {
 
       "&__content": {
         display: "block",
-        maxWidth: "720px",
+        maxWidth: "800px",
         boxSizing: "border-box",
         margin: "0 auto"
       },
 
       "&__logo": {
-        width: "180px",
+        width: "240px",
         height: "auto",
         margin: "160px 0 0",
         boxSizing: "border-box"
       },
 
-      "&__description": {}
+      "&__description": {
+        fontSize: "19px"
+      }
     }
   });
 
@@ -38,7 +40,7 @@ define([], function () {
           React.createElement("img", { className: "comingSoon__logo", src: "/assets/images/logo.png" }),
           React.createElement(
             "p",
-            { className: "comingSoon__Description" },
+            { className: "comingSoon__description" },
             "Coming Soon"
           )
         )
