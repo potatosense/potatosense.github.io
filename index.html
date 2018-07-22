@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="description" content=""/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+  <title>Bricks Design System</title>
+  <link rel="shortcut icon" href="/content/images/favicon.png" />
+
+  <style>
+  html, body, #root {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #FAFAFA;
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Fira Sans", sans-serif;
+    color: #19283D;
+  }
+  </style>
+
+</head>
+<body>
+
+  <div id="root">
+    <!-- Script inserts markup here-->
+  </div>
+
+  <!-- Library Scripts -->
+  <script type="text/javascript" src="lib/react.js"></script>
+  <script type="text/javascript" src="lib/react-dom.js"></script>
+  <script type="text/javascript" src="lib/react-router.js"></script>
+  <script type="text/javascript" src="lib/require.js"></script>
+  <script type="text/javascript" src="lib/styleplus.js"></script>
+
+  <script type="text/javascript">
+    require.config({
+      baseUrl: "/",
+      paths: {"components": "components", "content": "content"}
+    });
+    require(["content/bricksMainPage"], function (Page) {
+      ReactDOM.render( React.createElement(Page, {}), document.getElementById("root"));
+    });
+  </script>
+</body>
+</html>

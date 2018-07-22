@@ -1,0 +1,36 @@
+// .profile {
+//   margin-top: $grid-base * 10;
+//   overflow: hidden;
+//
+//   &__image {
+//     width: $column-width;
+//     height: $column-width;
+//     float: left;
+//     margin: 0 $column-gape 0 0;
+//   }
+//
+//   &__button {
+//     padding: ($column-width - ($grid-base * 5))/2 0;
+//     margin-right: $grid-base * 2;
+//     float: left;
+//
+//     &:last-child {
+//       margin-right: 0;
+//     }
+//   }
+//
+//   @media (max-width: $screen-mobile) {
+//     margin-top: 0;
+//
+//     &__image {
+//       width: $column-width-mobile;
+//       height: $column-width-mobile;
+//       margin: 0 ($grid-base * 2) 0 0;
+//     }
+//
+//     &__button {
+//       padding: ($column-width-mobile - ($grid-base * 5))/2 0;
+//       margin-right: $grid-base;
+//     }
+//   }
+// }

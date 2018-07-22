@@ -1,0 +1,43 @@
+/* Anchor */
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: $color-action-default;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited:hover {
+    color: $color-action-visited;
+  }
+}
+
+/* Icon Button */
+.icon-button {
+  display: inline-block;
+  width: $grid-base * 5;
+  height: $grid-base * 5;
+  background: $color-action-default;
+  border-radius: 50%;
+  background-size: 100%;
+
+
+  &:hover {
+    box-shadow: 0 1px 1px 0 rgba(#000, 0.2);
+  }
+
+  &.twitter {
+    background-image: url("/data/images/twitter-button.png");
+  }
+
+  &.linkedin {
+    background-image: url("/data/images/linkedin-button.png");
+  }
+
+  &.back {
+    background-image: url("/data/images/back-button.png");
+  }
+}

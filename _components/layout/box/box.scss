@@ -1,0 +1,95 @@
+/**
+* BOX
+*
+* Used for creating rows & columns layout.
+* Uses css flexbox.
+*/
+
+
+/**
+* STRUCTURE
+*
+*  .box OR .box--full OR .box--fullx
+*    |
+*    + .box-item (can have multiple .box-item)
+*/
+
+
+/**
+* STYLES
+*
+* 1. By default .box will create a full width row.
+*
+* 2. .box--full will cover full available space of parent
+*
+* 3. .box--fullx will cover full available space of parent but use absolute position
+*    it is useful for cases where parents height is unknown
+*/
+.box {
+  display: block;
+  width: 100%;
+  position: relative;
+  clear: both;
+  @include clearfix;
+}
+
+.box--full {
+  height: 100%;
+}
+
+.box--fullx {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/**
+* Box Layout Row
+*/
+.box--row-layout {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+
+  >.box__item {
+    flex-grow: 1 ; // All items get equal space
+    flex-shrink: 1000; // All items can shrink to 0
+    flex-basis: 100%; // Default size of each items
+    @include clearfix;
+    position: relative;
+    width: 100%;
+  }
+
+  >.box__fixed-item {
+    flex-shrink: 0; // Fixed sized items never shrink
+    @include clearfix;
+    position: relative;
+  }
+}
+
+/**
+* Box Layout Column
+*/
+.box--col-layout {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+
+  >.box__item {
+    flex-grow: 1 ; // All items get equal space
+    flex-shrink: 1000; // All items can shrink to 0
+    flex-basis: 100%; // Default size of each items
+    @include clearfix;
+    position: relative;
+    height: 100%;
+  }
+
+  >.box__fixed-item {
+    flex-shrink: 0; // Fixed sized items never shrink
+    @include clearfix;
+    position: relative;
+  }
+}

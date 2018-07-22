@@ -1,0 +1,18 @@
+/* background */
+.background {
+  display: block;
+  width: auto;
+  height: auto;
+  clear: both;
+  background: $color-bg-default;
+  @include clearfix;
+
+  &--border-top { border-top: 1px solid $color-border-default; }
+  &--border-bottom { border-bottom: 1px solid $color-border-default; }
+  &--border-left { border-left: 1px solid $color-border-default; }
+  &--border-right { border-right: 1px solid $color-border-default; }
+
+  &--highlight {
+    background: $color-bg-highlight;
+  }
+}

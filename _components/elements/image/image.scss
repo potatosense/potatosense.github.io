@@ -1,0 +1,15 @@
+/* Image */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: ($grid-base * 3) auto;
+
+  &--full {
+    width: 100%;
+  }
+
+  &--no-margin {
+    margin: 0 auto;
+  }
+}

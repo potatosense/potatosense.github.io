@@ -1,0 +1,26 @@
+/* Row and Column */
+.row {
+  display: block;
+  width: auto;
+  height: auto;
+  clear: both;
+  @include clearfix;
+
+  > .row__content {
+    display: block;
+    clear: both;
+    @include clearfix;
+
+    /* Column */
+    > .column {
+      display: block;
+      float: left;
+      width: 100%;
+      height: auto;
+
+      &:last-child {
+        float: right;
+      }
+    }
+  }
+}

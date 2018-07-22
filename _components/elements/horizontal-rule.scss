@@ -1,0 +1,8 @@
+/* Horizontal Separator */
+hr {
+  display: block;
+  clear: both;
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid $color-border-default;
+}
