@@ -11,18 +11,30 @@ define([], function () {
         display: "block",
         maxWidth: "800px",
         boxSizing: "border-box",
-        margin: "0 auto"
+        margin: "0 auto",
+        padding: "120px 32px"
+      },
+
+      "&__image": {
+        display: "block",
+        width: "210px",
+        height: "auto",
+        margin: "0",
+        boxSizing: "border-box",
+        opacity: "0.6"
       },
 
       "&__logo": {
-        width: "240px",
+        display: "block",
+        width: "280px",
         height: "auto",
-        margin: "160px 0 0",
+        margin: "16px 0 0",
         boxSizing: "border-box"
       },
 
       "&__description": {
-        fontSize: "19px"
+        fontSize: "19px",
+        color: "rgba(0,0,0,0.6)"
       }
     }
   });
@@ -32,6 +44,7 @@ define([], function () {
       return (
         <div className="comingSoon">
         <div className="comingSoon__content">
+          <img className="comingSoon__image" src="/assets/images/potato.png"/>
           <img className="comingSoon__logo" src="/assets/images/logo.png"/>
           <p className="comingSoon__description">
             Coming Soon
